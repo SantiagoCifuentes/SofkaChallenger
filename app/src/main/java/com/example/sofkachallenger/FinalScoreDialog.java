@@ -77,7 +77,5 @@ public class FinalScoreDialog
             tempScore = (correctAns * 20) - (wrongAns * 5);
             txtvwFinalScore.setText("Final Score: " + String.valueOf(tempScore));
         }
-
-
     }
 }

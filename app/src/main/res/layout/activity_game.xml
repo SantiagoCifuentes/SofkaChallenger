@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
+    android:id="@+id/ly_game_activity"
     tools:context=".GameActivity">
 
     <TextView
@@ -26,7 +27,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/helveticaboldoblique"
-        android:text="Score 1/8"
+        android:text=""
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +41,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/helveticaboldoblique"
-        android:text="Correct: 0 "
+        android:text="Correct:  "
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +55,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/helveticaboldoblique"
-        android:text="Wrong: 0 "
+        android:text="Wrong:  "
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,19 +63,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/questions_count" />
 
-    <TextView
-        android:id="@+id/game_timer"
-        android:layout_width="wrap_content"
-        android:layout_height="43dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/helveticaboldoblique"
-        android:text="Time : "
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_score" />
+
 
     <TextView
         android:id="@+id/game_question"

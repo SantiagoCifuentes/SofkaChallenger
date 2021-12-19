@@ -2,20 +2,26 @@ package com.example.sofkachallenger;
 
 public class Questions
 {
+    public static final String generalCulture_questions = "General";
+    public static final String maths = "Maths";
+    public static final String philosophy = "History";
+
+
+
     private String question;
     private String option1;
     private String option2;
     private String option3;
     private String option4;
     private int answer;
-    private int category;
+    private String category;
 
     public Questions()
     {
         //constructor sin parámetros en caso tal de que se necesite al momento de trabajar con la bd
     }
 
-    public Questions(String question, String option1, String option2, String option3, String option4, int answer,int category) {
+    public Questions(String question, String option1, String option2, String option3, String option4, int answer,String category) {
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;
@@ -74,11 +80,11 @@ public class Questions
         this.answer = answer;
     }
 
-    public int getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(int category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 }

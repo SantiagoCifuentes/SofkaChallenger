@@ -8,4 +8,5 @@
     <string name="little_explanation">Maybe is a quiz game where the more right answers you get, the harder it becomes</string>
     <string name="little_explanation2">You´re going to have to pass trough 5 levels. Each correct answer is going to give you a score. Remember, a correct answer means more rewards. Good luck and have fun !</string>
     <string name="lets_play">Let´s play</string>
+    <string name="onBackPressed">Push back again to exit</string>
 </resources>
