@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/questions_count"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/helveticaboldoblique"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/game_score"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/helveticaboldoblique"
+        android:text="Score 1/8"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questions_count" />
+
+    <TextView
+        android:id="@+id/game_CorrectAnsw"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/helveticaboldoblique"
+        android:text="Correct: 0 "
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questions_count" />
+
+    <TextView
+        android:id="@+id/game_wrongAnsw"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/helveticaboldoblique"
+        android:text="Wrong: 0 "
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questions_count" />
+
+    <TextView
+        android:id="@+id/game_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/helveticaboldoblique"
+        android:text="Time : "
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_score" />
+
+    <TextView
+        android:id="@+id/game_question"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        android:layout_marginBottom="428dp"
+        android:fontFamily="@font/helveticaboldoblique"
+        android:text="Question"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/game_wrongAnsw"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="@+id/game_CorrectAnsw" />
+
+
+    <LinearLayout
+        android:id="@+id/linearly_register"
+        android:layout_width="406dp"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_question" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:paddingHorizontal="10dp"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/rdbtn_ans1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helveticaboldoblique"
+                android:text="Radio"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rdbtn_ans2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helveticaboldoblique"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:text="RadioButton" />
+
+            <RadioButton
+                android:id="@+id/rdbtn_ans3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helveticaboldoblique"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:text="RadioButton" />
+
+            <RadioButton
+                android:id="@+id/rdbtn_ans4"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helveticaboldoblique"
+                android:textColor="@color/white"
+                android:text="RadioButton" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_gameNext"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/boton_style"
+            android:fontFamily="@font/helveticaboldoblique"
+            android:text="Next"
+            android:textColor="@color/text_color"
+
+            app:backgroundTint="@color/white" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
