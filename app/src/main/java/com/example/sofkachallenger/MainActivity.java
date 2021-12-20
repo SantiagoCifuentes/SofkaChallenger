@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void validator() // se realiza unas pequeñas validaciones
+    public void validator() // se realizan unas pequeñas validaciones
     {
         inputUser=user.getText().toString();
         inputPassword=password.getText().toString();

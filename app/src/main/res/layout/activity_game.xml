@@ -15,7 +15,7 @@
         android:layout_marginTop="44dp"
         android:fontFamily="@font/helveticaboldoblique"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,7 @@
         android:fontFamily="@font/helveticaboldoblique"
         android:text=""
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.012"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,9 +41,9 @@
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/helveticaboldoblique"
-        android:text="Correct:  "
+        android:text="@string/correct"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,9 +55,9 @@
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/helveticaboldoblique"
-        android:text="Wrong:  "
+        android:text="@string/wrong"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,9 +74,9 @@
 
         android:layout_marginBottom="428dp"
         android:fontFamily="@font/helveticaboldoblique"
-        android:text="Question"
+        android:text="@string/question"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/game_wrongAnsw"
         app:layout_constraintHorizontal_bias="0.427"
@@ -106,7 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/helveticaboldoblique"
-                android:text="Radio"
+
                 android:textColor="@color/white" />
 
             <RadioButton
@@ -116,7 +116,7 @@
                 android:fontFamily="@font/helveticaboldoblique"
                 android:textColor="@color/white"
                 android:layout_marginTop="10dp"
-                android:text="RadioButton" />
+                 />
 
             <RadioButton
                 android:id="@+id/rdbtn_ans3"
@@ -125,7 +125,7 @@
                 android:fontFamily="@font/helveticaboldoblique"
                 android:textColor="@color/white"
                 android:layout_marginTop="10dp"
-                android:text="RadioButton" />
+                 />
 
             <RadioButton
                 android:id="@+id/rdbtn_ans4"
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/helveticaboldoblique"
                 android:textColor="@color/white"
-                android:text="RadioButton" />
+                 />
 
         </RadioGroup>
 
@@ -145,7 +145,7 @@
             android:layout_marginTop="30dp"
             android:background="@drawable/boton_style"
             android:fontFamily="@font/helveticaboldoblique"
-            android:text="Next"
+
             android:textColor="@color/text_color"
 
             app:backgroundTint="@color/white" />

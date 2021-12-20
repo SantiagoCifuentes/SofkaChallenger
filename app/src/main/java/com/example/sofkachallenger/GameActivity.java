@@ -460,8 +460,7 @@ public class GameActivity extends AppCompatActivity {
                 startActivity(intent); //pasa a la siguiente categoría
             }
         }
-    }
-
+    }// método que muestra y actualiza las preguntas y opciones de respuesta
     long count1=0;
 
     @Override

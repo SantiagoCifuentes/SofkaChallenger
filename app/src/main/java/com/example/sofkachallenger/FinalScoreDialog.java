@@ -1,5 +1,6 @@
 package com.example.sofkachallenger;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -44,7 +45,8 @@ public class FinalScoreDialog
 
     }
 
-    private void finalScoreValidations(int correctAns, int wrongAns, int totalSize)
+    @SuppressLint("SetTextI18n")
+    private void finalScoreValidations(int correctAns, int wrongAns, int totalSize) // método em el cuál se hace la fórmula del score
 
     {
         int tempScore;
