@@ -1,8 +1,7 @@
 # SofkaChallenge
 Notas preliminares:
 
-La base de datos se montó en sqlite, por lo que para acceder a la bd se necesita un programa que pueda abrir este tipo de datos, como db browser, para descargar la bd
-desde el android studio se sigue la ruta de View- > Tools Windows -> Device File Explorer -> /data/data/com.example.sofkachallenger/databases/SofkaChallenger.db , click derecho
+El reto lo realicé en Android Studio utilizando java. La pantalla que utilicé para el emulador es un Pixel 3a y la API es la 30. La base de datos se montó en sqlite, por lo que para acceder a la bd se necesita un programa que pueda abrir este tipo de datos, como db browser, para descargar la bd desde el android studio se sigue la ruta de View- > Tools Windows -> Device File Explorer -> /data/data/com.example.sofkachallenger/databases/SofkaChallenger.db , click derecho
 Save as
 
 El juego consta de 3 categorías, "cultura general", "matemáticas" e " historia. Estas 3 categorías son lineales, lo cual quiere decir, que siempre se seguirá este orden en 
