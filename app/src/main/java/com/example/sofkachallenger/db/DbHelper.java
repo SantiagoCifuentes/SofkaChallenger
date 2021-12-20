@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 public class DbHelper extends SQLiteOpenHelper
 {
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NAME = "SofkaChallenger.db";
 
     private Context context;

@@ -73,7 +73,8 @@ public class MainActivity extends AppCompatActivity
         {
 
 
-
+            prefe=getSharedPreferences("data",MODE_PRIVATE);
+            editor= prefe.edit();
 
             editor.putString("user",this.getInputUser());
             startActivity(new Intent(this,ExplainingActivity.class));

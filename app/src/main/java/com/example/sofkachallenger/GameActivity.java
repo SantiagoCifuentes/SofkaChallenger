@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -40,7 +41,7 @@ public class GameActivity extends AppCompatActivity {
     RadioButton rb4;
     Button buttonNext;
 
-    Intent intent;
+
 
     public ArrayList<Questions> questionList;
     private int questionCounter;
@@ -77,11 +78,22 @@ public class GameActivity extends AppCompatActivity {
             radioButton.setText(String.format("Respuesta %d",i));
 
         }*/
-       intent = new Intent(this,GameActivity.class); // en estas 5(78-82) líneas de código se extrae los datos del contador de las cateogrías, preguntas buenas y malas y el puntaje
-       cont = getIntent().getExtras().getInt("cont");
-       correctAnswer = getIntent().getExtras().getInt("correctAnswer");
-       wrongAnswer = getIntent().getExtras().getInt("wrongAnswer");
-       score = getIntent().getExtras().getInt("score");
+
+    /*    intent = new Intent(this,GameActivity.class); // en estas 5(78-82) líneas de código se extrae los datos del contador de las cateogrías, preguntas buenas y malas y el puntaje
+        cont = getIntent().getExtras().getInt("cont");
+        correctAnswer = getIntent().getExtras().getInt("correctAnswer");
+        wrongAnswer = getIntent().getExtras().getInt("wrongAnswer");
+        score = getIntent().getExtras().getInt("score");*/
+
+
+
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences("datos", MODE_PRIVATE); //shared preferences  para guardar los datos del contador de las cateogrías, preguntas buenas y malas y el puntaje
+        cont = prefs.getInt("cont", 0);                                                               // cada vez que nos salimos de la app
+        correctAnswer = prefs.getInt("correctAnswer",0);
+        wrongAnswer = prefs.getInt("wrongAnswer",0);
+        score = prefs.getInt("score",0);
+        questionCounter = prefs.getInt("questionCounter",1)-1; //se le resta 1 ya que por un bug , se estaba repitiendo la última pregunta
+
 
 
         idInitializers();
@@ -116,6 +128,7 @@ public class GameActivity extends AppCompatActivity {
 
         buttonNext = findViewById(R.id.btn_gameNext);
 
+
     }
 
     private void dbInitializer() {
@@ -124,7 +137,7 @@ public class GameActivity extends AppCompatActivity {
         DbHelper dbHelper = new DbHelper(this);
 
 
-        switch (cont) // se realiza en un switch para poder obtener las categorías del modelado.
+        switch (cont) // se realiza en un switch para poder obtener las categorías del modelado de la clase Questions.
         {
             case 1 :
                 questionList = dbHelper.getAllQuestionsWithCategory("General");
@@ -424,15 +437,24 @@ public class GameActivity extends AppCompatActivity {
                         //FinalScoreDialog, la cual muestra un alertDialog con el puntaje total obtenido
                     }
                 }
-            }, 2000);
+            }, 500);
 
             if(cont < 3) // se realiza este if para mandarle los datos  de las preguntas buenas, malas y puntaje a la siguiente categoría
             {
                 cont ++ ; //se incrementa la categoría
-                intent.putExtra("cont",cont);
+               /* intent.putExtra("cont",cont);
                 intent.putExtra("correctAnswer",correctAnswer);
                 intent.putExtra("wrongAnswer",wrongAnswer);
                 intent.putExtra("score",score);
+*/
+                SharedPreferences.Editor editor = getSharedPreferences("datos", MODE_PRIVATE).edit(); // de la l´inea 450 a la 457 se hace el setting para luego utilizar el shared preferences
+                editor.putInt("cont", cont);
+                editor.putInt("correctAnswer",correctAnswer);
+                editor.putInt("wrongAnswer",wrongAnswer);
+                editor.putInt("score",score);
+                editor.putInt("questionCounter", 1);
+                editor.apply();
+                Intent intent = new Intent(this,GameActivity.class );
                 startActivity(intent); //pasa a la siguiente categoría
             }
         }
@@ -441,8 +463,23 @@ public class GameActivity extends AppCompatActivity {
     long count1=0;
 
     @Override
-    public void onBackPressed()
+    public void onBackPressed() // método en el cual al darle atrás , nos saldrá un aviso diciendo que volvamos a pulsar atrás para salir de la app
+                                //además se prepara el editor para luego recuperar los datos en el on create con el shared preferences
     {
+
+
+        SharedPreferences.Editor editor = getSharedPreferences("datos", MODE_PRIVATE).edit();
+        editor.putInt("cont", cont);
+        editor.putInt("correctAnswer",correctAnswer);
+        editor.putInt("wrongAnswer",wrongAnswer);
+        editor.putInt("score",score);
+        editor.putInt("questionCounter", questionCounter);
+        editor.apply();
+
+
+
+
+
         String backAgain=getString(R.string.onBackPressed);
 
         ConstraintLayout constraintLayout;

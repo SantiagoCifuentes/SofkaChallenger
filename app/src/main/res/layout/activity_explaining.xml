@@ -91,4 +91,19 @@
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2" />
 
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="137dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/boton_style"
+        android:fontFamily="@font/helveticaboldoblique"
+        android:text="Clear"
+        android:textColor="@color/text_color"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
