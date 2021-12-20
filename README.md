@@ -14,3 +14,8 @@ la clase Shared Preferences,  y lo utilicé para guardar el usuario del login, y
 Debido al tiempo, la funcionalidad de los premios, en este caso , el puntaje, lo mostré en un alertdialog que de muestra el puntaje total obtenido al final del juego. No obstante, no queda registrado en un histórico de puntajes.
 
 De igual manera, traté de comentar casi todo el código para explicar con más detalle qué hace cada línea.
+
+Decidí agregarle un splash art, login y una sencilla pero agradable UI como valor agregado al reto. En el login, si se clickea la opción de "Remember credentials", te guardará la sesión y el nombre digitado en el login.  Además, realicé un breve mockup al inicio de todo el reto, el cual diferió bastante de la propuesta final pero también quise añadirlo. 
+Debajo dejo el link con pantallazos del mockup
+
+![image](https://user-images.githubusercontent.com/85410941/146843687-15934d8c-3124-43f3-a9a3-66704bae5007.png)
