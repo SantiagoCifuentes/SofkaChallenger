@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void validator()
+    public void validator() // se realiza unas pequeñas validaciones
     {
         inputUser=user.getText().toString();
         inputPassword=password.getText().toString();
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity
             prefe=getSharedPreferences("data",MODE_PRIVATE);
             editor= prefe.edit();
 
-            editor.putString("user",this.getInputUser());
+            editor.putString("user",this.getInputUser()); //me guarda los datos del usuario que se pone en user
             startActivity(new Intent(this,ExplainingActivity.class));
 
 

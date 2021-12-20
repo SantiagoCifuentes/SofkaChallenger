@@ -17,11 +17,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
-
-import androidx.annotation.Nullable;
-
-import com.example.sofkachallenger.Questions;
 
 import java.util.ArrayList;
 
@@ -57,13 +52,13 @@ public class DbHelper extends SQLiteOpenHelper
     {
 
 
-        db.execSQL(SQL_DELETE_USER);
+        db.execSQL(SQL_DELETE_USER); // se ejecuta la creacion de la tabla
         onCreate(db);
     }
 
 
 
-    private void addQuestions(Questions questions)
+    private void addQuestions(Questions questions) // se agregan las preguntas a la tabla
     {
 
         ContentValues values = new ContentValues();
@@ -83,7 +78,7 @@ public class DbHelper extends SQLiteOpenHelper
 
     }
 
-    public  void fillingQuestionsTB()
+    public  void fillingQuestionsTB() //banco de preguntas
     {   //general
         Questions q1= new Questions("What does “www” stand for in a website browser?","Third world war","World Wide Web","William Wallace Wagon","No one",2,"General");
         addQuestions(q1);
@@ -186,7 +181,7 @@ public class DbHelper extends SQLiteOpenHelper
 
 
     @SuppressLint("Range")
-    public ArrayList<Questions> getAllQuestionsWithCategory(String category) //método para crear un arraylist y guardar en él las preguntas y asignárselas a cada columna
+    public ArrayList<Questions> getAllQuestionsWithCategory(String category) //método para crear un arraylist y guardar en él las preguntas por categoría y asignárselas a cada columna
     {
         ArrayList<Questions> questionsList = new ArrayList<>();
 

@@ -6,7 +6,14 @@
     <string name="remember_user">Remember username</string>
     <string name="sign_in">Sign in</string>
     <string name="little_explanation">Maybe is a quiz game where the more right answers you get, the harder it becomes</string>
-    <string name="little_explanation2">You´re going to have to pass trough 5 levels. Each correct answer is going to give you a score. Remember, a correct answer means more rewards. Good luck and have fun !</string>
+    <string name="little_explanation2">You´re going to have to pass trough 3 category. Each correct answer is going to give you a score. Remember, a correct answer means more rewards</string>
     <string name="lets_play">Let´s play</string>
     <string name="onBackPressed">Push back again to exit</string>
+    <string name="log_out">Log out</string>
+    <string name="clear_data">Clear data</string>
+    <string name="todo1">TODO</string>
+    <string name="welcome">Welcome</string>
+    <string name="correct">Correct:</string>
+    <string name="wrong">Wrong:</string>
+    <string name="question">Question</string>
 </resources>

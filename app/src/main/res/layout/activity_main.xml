@@ -90,15 +90,14 @@
 
     <CheckBox
         android:id="@+id/login_check"
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
+        android:layout_width="194dp"
+        android:layout_height="53dp"
         android:layout_marginTop="36dp"
         android:background="@drawable/boton_style"
         android:fontFamily="@font/helveticaboldoblique"
         android:text="@string/remember_user"
         android:textColor="@color/text_color"
         app:buttonTint="@color/text_color"
-
         app:layout_constraintEnd_toEndOf="@+id/ly_password"
         app:layout_constraintStart_toStartOf="@+id/ly_password"
         app:layout_constraintTop_toBottomOf="@+id/ly_password" />
@@ -108,7 +107,7 @@
         android:id="@+id/btn_login"
         android:layout_width="137dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/boton_style"
         android:fontFamily="@font/helveticaboldoblique"
         android:text="@string/sign_in"

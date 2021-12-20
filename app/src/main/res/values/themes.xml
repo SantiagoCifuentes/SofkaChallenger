@@ -13,4 +13,16 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <!-- Screen splash. -->
+    <style name="Theme.SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/background_color</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">
+            @drawable/splash_screeen
+        </item>
+    </style>
 </resources>

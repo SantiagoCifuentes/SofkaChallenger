@@ -4,13 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
 
-import android.content.Context;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
@@ -20,12 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sofkachallenger.db.DbHelper;
-import com.example.sofkachallenger.db.DbQuestions;
+
+import com.example.sofkachallenger.db.Questions;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Locale;
 
 public class GameActivity extends AppCompatActivity {
    /* private int id_answers[] =
@@ -67,6 +65,7 @@ public class GameActivity extends AppCompatActivity {
 
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -167,6 +166,7 @@ public class GameActivity extends AppCompatActivity {
         showQuestions();
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int id) // al momento de seleccionar una respuesta correcta, se pondrá de los colores que son
             // ya que tuve un error en el que al pasar de pregunta, igual se quedaba el color de la opción
@@ -232,6 +232,7 @@ public class GameActivity extends AppCompatActivity {
         checkSolution(answerNr, rbSelected);
     } // método que inicializa los raddiobuttons y al final se llama al método checksolution para mostrar tanto las preguntas, como las respuestas, buenas y malas
 
+    @SuppressLint("SetTextI18n")
     private void checkSolution(int answerNr, RadioButton rbSelected) {
         switch (currentQuestion.getAnswer()) // se va a validar que la pregunte esté buena o no
         {
@@ -393,6 +394,7 @@ public class GameActivity extends AppCompatActivity {
         rbSelected.setBackground(ContextCompat.getDrawable(this, R.drawable.wrong_answer));
     } //este método se utiliza cuando se selecciona una pregunta incorrecta
 
+    @SuppressLint("SetTextI18n")
     public void showQuestions() {
         radioGroup.clearCheck(); //limpia lo seleccionado
 

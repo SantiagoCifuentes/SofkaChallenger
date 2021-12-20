@@ -1,29 +1,11 @@
 package com.example.sofkachallenger.db;
 
-import static com.example.sofkachallenger.db.Config.QuestionsTable1.COLUMN_ANSWER;
-import static com.example.sofkachallenger.db.Config.QuestionsTable1.COLUMN_CATEGORY;
-import static com.example.sofkachallenger.db.Config.QuestionsTable1.COLUMN_OPTION1;
-import static com.example.sofkachallenger.db.Config.QuestionsTable1.COLUMN_OPTION2;
-import static com.example.sofkachallenger.db.Config.QuestionsTable1.COLUMN_OPTION3;
-import static com.example.sofkachallenger.db.Config.QuestionsTable1.COLUMN_OPTION4;
-import static com.example.sofkachallenger.db.Config.QuestionsTable1.COLUMN_QUESTION;
-import static com.example.sofkachallenger.db.Config.QuestionsTable1.TABLE_NAME;
-
-import android.annotation.SuppressLint;
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
-
-import com.example.sofkachallenger.Questions;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public  class  DbQuestions extends DbHelper
+/*public  class  DbQuestions extends DbHelper
 {
-    SQLiteDatabase db;
+
+    //En esta clase traté de organizarlo para utilizar más la oop pero me resultó en varios incovenientes, por lo que to do está comentado pero lo quise dejar como evidencia
+
+  *//*  SQLiteDatabase db;
     @SuppressLint("StaticFieldLeak")
     static Context context; //se pone static ya que, como solo se va a necesitar el método fillinquestions
     // nos ahorramos la creación de instancias u objetos del método anteriormente descrito
@@ -33,9 +15,9 @@ public  class  DbQuestions extends DbHelper
         super(context);
         DbQuestions.context = context;
 
-    }
+    }*//*
 
-   /* public static void fillingQuestionsTB()
+   *//* public static void fillingQuestionsTB()
     {
         Questions q1= new Questions("What does “www” stand for in a website browser?","Third world war","World Wide Web","William Wallace Wagon","No one",2,1);
         insert(q1);
@@ -63,10 +45,10 @@ public  class  DbQuestions extends DbHelper
         Questions q8= new Questions("Demolition of the Berlin wall separating East and West Germany began in what year?","1989","2015","1915","1935",1,2);
         insert(q8);
 
-    }*/
+    }*//*
 
 
-   /* public static void insert (Questions questions)
+   *//* public static void insert (Questions questions)
     {
 
         try //lo realizo en un try y catch para saber si se insertaron bien los datos o no
@@ -92,11 +74,11 @@ public  class  DbQuestions extends DbHelper
             Toast.makeText(context, "Error: " + ex, Toast.LENGTH_SHORT).show();
         }
       //  return  result;
-    }*/
+    }*//*
 
 
 
-    /*public ArrayList<Questions>getAllQuestions() //método para crear un arraylist y guardar en él las preguntas y asignárselas a cada columna
+    *//*public ArrayList<Questions>getAllQuestions() //método para crear un arraylist y guardar en él las preguntas y asignárselas a cada columna
     {
         ArrayList<Questions> questionsList = new ArrayList<>();
 
@@ -138,11 +120,11 @@ public  class  DbQuestions extends DbHelper
         }
         cursor.close();
         return  questionsList;
-    }*/
+    }*//*
 
 
 
 
 
 
-}
+}*/

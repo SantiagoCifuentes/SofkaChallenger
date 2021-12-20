@@ -1,7 +1,10 @@
-package com.example.sofkachallenger;
+package com.example.sofkachallenger.db;
 
 public class Questions
 {
+
+    //En esta clase se hará to do el modelado de objetos que se utilizarán posteriormente en la base de datos
+
     public static final String generalCulture_questions = "General";
     public static final String maths = "Maths";
     public static final String philosophy = "History";

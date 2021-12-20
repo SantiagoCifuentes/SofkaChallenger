@@ -4,11 +4,15 @@ import android.provider.BaseColumns;
 
 public final class Config
 {
+
+
+
     private Config()
     {
         //constructor sin parámetros
     }
 
+    //Configuracion de las tablas en la bd
 
     public static class QuestionsTable1 implements BaseColumns
     {
@@ -23,7 +27,7 @@ public final class Config
     }
 
 
-    protected  final  static  String  SQL_CREATE_QUESTIONS_TABLE =
+    protected  final  static  String  SQL_CREATE_QUESTIONS_TABLE = //
             "CREATE TABLE " + QuestionsTable1.TABLE_NAME + " (" +
                     QuestionsTable1._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     QuestionsTable1.COLUMN_QUESTION + " TEXT NOT NULL," +
