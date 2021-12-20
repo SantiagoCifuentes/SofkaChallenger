@@ -12,3 +12,5 @@ Las preguntas se aleatorizan en cada categoría y al final del juego te da un pu
 la clase Shared Preferences,  y lo utilicé para guardar el usuario del login, y que al salirse de la app, te guarde las respuestas buenas, malas y el puntaje.
 
 Debido al tiempo, la funcionalidad de los premios, en este caso , el puntaje, lo mostré en un alertdialog que de muestra el puntaje total obtenido al final del juego. No obstante, no queda registrado en un histórico de puntajes.
+
+De igual manera, traté de comentar casi todo el código para explicar a más detalle qué hace cada línea.
