@@ -13,4 +13,4 @@ la clase Shared Preferences,  y lo utilicé para guardar el usuario del login, y
 
 Debido al tiempo, la funcionalidad de los premios, en este caso , el puntaje, lo mostré en un alertdialog que de muestra el puntaje total obtenido al final del juego. No obstante, no queda registrado en un histórico de puntajes.
 
-De igual manera, traté de comentar casi todo el código para explicar a más detalle qué hace cada línea.
+De igual manera, traté de comentar casi todo el código para explicar con más detalle qué hace cada línea.
